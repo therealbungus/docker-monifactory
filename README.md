@@ -2,7 +2,7 @@
 
 **[Based on docker setup from mmwatt](https://github.com/mmwatt/docker-createstellar)**
 
-Code and documentation is mostly copied from goobaru and mmwatt, with many changes to make it work for Nomifactory
+Code and documentation is mostly copied from goobaru and mmwatt, with many changes to make it work for Monifactory.
 
 <!-- toc -->
 
