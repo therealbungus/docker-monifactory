@@ -12,8 +12,11 @@ else
 fi
 
 if ! [[ -f 'Monifactory-Beta.0.11.5-server.zip' ]]; then
-	rm -fr config kubejs libraries mods Monifactory*.zip forge*.jar
-	curl -Lo 'Monifactory-Beta.0.11.5-server.zip' 'https://github.com/ThePansmith/Monifactory/releases/download/0.11.5/Monifactory-Beta.0.11.5-server.zip' && ln -s . overrides && unzip -u -o 'Monifactory-Beta.0.11.5-server.zip' 'overrides/*' -d /data && rm overrides
+	rm -fr config kubejs libraries mods Server*.zip forge*.jar
+	curl -Lo 'Server-0.11.5.zip' 'https://github.com/ThePansmith/Monifactory/releases/download/0.11.5/Monifactory-Beta.0.11.5-server.zip' 
+	ln -s /data /data/overrides
+	unzip -u -o 'Server-0.11.5.zip' -d /data
+	rm /data/overrides
 	# java -jar $(ls forge-*-installer.jar) --installServer
 fi
 
