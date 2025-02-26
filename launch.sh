@@ -34,7 +34,7 @@ fi
 
 sed -i 's/server-port.*/server-port=25565/g' server.properties
 
-sed -i "s/-Xms4G -Xmx4G/$JVM_OPTS/" variables.txt
+sed -i "s/-Xms8G -Xmx8G/$JVM_OPTS/" variables.txt
 
 curl -Lo '/data/pack-mode-switcher.sh' 'https://raw.githubusercontent.com/ThePansmith/Monifactory/refs/heads/main/pack-mode-switcher.sh'
 curl -Lo '/data/start.sh' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/latest/start.sh'

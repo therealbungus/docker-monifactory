@@ -38,7 +38,7 @@ As the end user, you are repsonsible for accepting the EULA from Mojang to run t
 
 These environment variables can be set at run time to override their defaults.
 
-* JVM_OPTS "-Xms2048m -Xmx4096m"
+* JVM_OPTS "-Xms8G -Xmx8G"
 * MOTD "Monifactory 0.11.5 Server Powered by Docker"
 * LEVEL world
 
