@@ -19,7 +19,7 @@ EXPOSE 25565/tcp
 
 CMD ["/launch.sh"]
 
-ENV MOTD=" Server Powered by Docker"
+ENV MOTD="Monifactory 0.11.5 Server Powered by Docker"
 ENV LEVEL=world
-ENV JVM_OPTS="-Xms2048m -Xmx4096m"
+ENV JVM_OPTS="-Xmx8G -Xms8G"
 

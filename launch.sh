@@ -12,7 +12,7 @@ else
 fi
 
 if ! [[ -f 'Server-0.11.5.zip' ]]; then
-	rm -fr config config-overrides defaultconfigs kubejs libraries mods Server*.zip forge*.jar
+	rm -fr config config-overrides defaultconfigs kubejs mods Server*.zip forge*.jar
 	curl -Lo 'Server-0.11.5.zip' 'https://github.com/ThePansmith/Monifactory/releases/download/0.11.5/Monifactory-Beta.0.11.5-server.zip' 
 	ln -s /data /data/overrides
 	unzip -u -o 'Server-0.11.5.zip' -d /data
@@ -37,7 +37,7 @@ fi
 
 sed -i 's/server-port.*/server-port=25565/g' server.properties
 
-sed -i "s/-Xmx4G -Xms4G/$JVM_OPTS/" variables.txt
+sed -i "s/-Xmx8G -Xms8G/$JVM_OPTS/" variables.txt
 
 chmod +x /data/start.sh
 chmod +x /data/pack-mode-switcher.sh

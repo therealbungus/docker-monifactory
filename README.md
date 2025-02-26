@@ -2,7 +2,7 @@
 
 **[Based on docker setup from mmwatt](https://github.com/mmwatt/docker-createstellar)**
 
-Code and documentation is mostly copied from goobaru and mmwatt, with alterations to correct the JRE version and changing the server file to Nomifactory
+Code and documentation is mostly copied from goobaru and mmwatt, with many changes to make it work for Nomifactory
 
 <!-- toc -->
 
@@ -38,7 +38,7 @@ As the end user, you are repsonsible for accepting the EULA from Mojang to run t
 
 These environment variables can be set at run time to override their defaults.
 
-* JVM_OPTS "-Xms8G -Xmx8G"
+* JVM_OPTS "-Xmx8G -Xms8G"
 * MOTD "Monifactory 0.11.5 Server Powered by Docker"
 * LEVEL world
 
