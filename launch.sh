@@ -34,7 +34,7 @@ sed -i 's/server-port.*/server-port=25565/g' server.properties
 
 sed -i "s/-Xms4G -Xmx4G/$JVM_OPTS/" variables.txt
 
-curl -Lo '/data/start.sh' 'https://github.com/therealbungus/docker-monifactory/blob/master/start.sh'
-curl -Lo '/data/variables.txt' 'https://github.com/therealbungus/docker-monifactory/blob/master/variables.txt'
+curl -Lo '/data/start.sh' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/master/start.sh'
+curl -Lo '/data/variables.txt' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/master/variables.txt'
 chmod +x /data/start.sh
 /data/start.sh
