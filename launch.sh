@@ -37,8 +37,8 @@ sed -i 's/server-port.*/server-port=25565/g' server.properties
 sed -i "s/-Xms4G -Xmx4G/$JVM_OPTS/" variables.txt
 
 curl -Lo '/data/pack-mode-switcher.sh' 'https://raw.githubusercontent.com/ThePansmith/Monifactory/refs/heads/main/pack-mode-switcher.sh'
-curl -Lo '/data/start.sh' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/master/start.sh'
-curl -Lo '/data/variables.txt' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/master/variables.txt'
+curl -Lo '/data/start.sh' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/latest/start.sh'
+curl -Lo '/data/variables.txt' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/latest/variables.txt'
 chmod +x /data/start.sh
 chmod +x /data/pack-mode-switcher.sh
 /data/start.sh
