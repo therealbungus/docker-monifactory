@@ -17,6 +17,9 @@ if ! [[ -f 'Server-0.11.5.zip' ]]; then
 	ln -s /data /data/overrides
 	unzip -u -o 'Server-0.11.5.zip' -d /data
 	rm /data/overrides
+	curl -Lo '/data/pack-mode-switcher.sh' 'https://raw.githubusercontent.com/ThePansmith/Monifactory/refs/heads/main/pack-mode-switcher.sh'
+	curl -Lo '/data/start.sh' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/latest/start.sh'
+	curl -Lo '/data/variables.txt' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/latest/variables.txt'
 fi
 
 if [[ -n "$MOTD" ]]; then
@@ -36,9 +39,6 @@ sed -i 's/server-port.*/server-port=25565/g' server.properties
 
 sed -i "s/-Xmx4G -Xms4G/$JVM_OPTS/" variables.txt
 
-curl -Lo '/data/pack-mode-switcher.sh' 'https://raw.githubusercontent.com/ThePansmith/Monifactory/refs/heads/main/pack-mode-switcher.sh'
-curl -Lo '/data/start.sh' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/latest/start.sh'
-curl -Lo '/data/variables.txt' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/latest/variables.txt'
 chmod +x /data/start.sh
 chmod +x /data/pack-mode-switcher.sh
 /data/start.sh
