@@ -19,6 +19,6 @@ EXPOSE 25565/tcp
 
 CMD ["/launch.sh"]
 
-ENV MOTD " Server Powered by Docker"
-ENV LEVEL world
-ENV JVM_OPTS "-Xms2048m -Xmx4096m"
+ENV MOTD=" Server Powered by Docker"
+ENV LEVEL=world
+ENV JVM_OPTS="-Xms2048m -Xmx4096m"
