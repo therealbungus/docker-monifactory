@@ -11,13 +11,13 @@ else
 	exit 9
 fi
 
-if ! [[ -f 'Server-0.11.5.zip' ]]; then
-	rm -fr config config-overrides defaultconfigs kubejs mods Server*.zip forge*.jar
+if ! [[ -f 'Server-mmdev-cb11ad6.zip' ]]; then
+	rm -fr config config-overrides defaultconfigs libraries kubejs mods Server*.zip forge*.jar forge*.log run.bat run.sh
 	curl -Lo '/data/forge-1.20.1-47.3.7-installer.jar' 'https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.3.7/forge-1.20.1-47.3.7-installer.jar'
 	java -jar forge-1.20.1-47.3.7-installer.jar --installServer
-	curl -Lo 'Server-0.11.5.zip' 'https://github.com/ThePansmith/Monifactory/releases/download/0.11.5/Monifactory-Beta.0.11.5-server.zip' 
+	curl -Lo 'Server-mmdev-cb11ad6.zip' 'https://cloud.bungus.space/s/PNdKw5oYo8BJELb/download/server.zip' 
 	ln -s /data /data/overrides
-	unzip -u -o 'Server-0.11.5.zip' -d /data
+	unzip -u -o 'Server-mmdev-cb11ad6.zip' -d /data
 	rm /data/overrides
 	curl -Lo '/data/pack-mode-switcher.sh' 'https://raw.githubusercontent.com/ThePansmith/Monifactory/refs/heads/main/pack-mode-switcher.sh'
 fi
