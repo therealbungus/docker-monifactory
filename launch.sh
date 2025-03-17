@@ -19,6 +19,11 @@ if ! [[ -f 'Server-mmdev-cb11ad6.zip' ]]; then
 	ln -s /data /data/overrides
 	unzip -u -o 'Server-mmdev-cb11ad6.zip' -d /data
 	rm /data/overrides
+	rm /data/mods ToastControl*.jar
+	rm /data/mods customfov*.jar
+	rm /data/mods BadOptimizations*.jar
+	rm /data/mods ToastControl*.jar
+	rm /data/mods embeddium*.jar
 	curl -Lo '/data/pack-mode-switcher.sh' 'https://raw.githubusercontent.com/ThePansmith/Monifactory/refs/heads/main/pack-mode-switcher.sh'
 fi
 
