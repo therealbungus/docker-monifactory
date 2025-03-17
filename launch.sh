@@ -13,13 +13,13 @@ fi
 
 if ! [[ -f 'Server-0.11.5.zip' ]]; then
 	rm -fr config config-overrides defaultconfigs kubejs mods Server*.zip forge*.jar
+	curl -Lo '/data/forge-1.20.1-47.3.7-installer.jar' 'https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.3.7/forge-1.20.1-47.3.7-installer.jar'
+	java -jar forge-1.20.1-47.3.7-installer.jar --installServer
 	curl -Lo 'Server-0.11.5.zip' 'https://github.com/ThePansmith/Monifactory/releases/download/0.11.5/Monifactory-Beta.0.11.5-server.zip' 
 	ln -s /data /data/overrides
 	unzip -u -o 'Server-0.11.5.zip' -d /data
 	rm /data/overrides
 	curl -Lo '/data/pack-mode-switcher.sh' 'https://raw.githubusercontent.com/ThePansmith/Monifactory/refs/heads/main/pack-mode-switcher.sh'
-	curl -Lo '/data/start.sh' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/latest/start.sh'
-	curl -Lo '/data/variables.txt' 'https://raw.githubusercontent.com/therealbungus/docker-monifactory/refs/heads/latest/variables.txt'
 fi
 
 if [[ -n "$MOTD" ]]; then
@@ -37,8 +37,8 @@ fi
 
 sed -i 's/server-port.*/server-port=25565/g' server.properties
 
-sed -i "s/-Xmx8G -Xms8G/$JVM_OPTS/" variables.txt
+sed -i "s/# -Xmx4G/$JVM_OPTS/" user_jvm_args.txt
 
-chmod +x /data/start.sh
 chmod +x /data/pack-mode-switcher.sh
-/data/start.sh
+chmod +x /data/run.sh
+/data/run.sh
