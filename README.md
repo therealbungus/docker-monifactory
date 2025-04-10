@@ -1,4 +1,4 @@
-# [Monifactory 0.12.1](https://www.curseforge.com/minecraft/modpacks/monifactory) on Curseforge
+# [Monifactory 0.12.3](https://www.curseforge.com/minecraft/modpacks/monifactory) on Curseforge
 
 **[Based on docker setup from mmwatt](https://github.com/mmwatt/docker-createstellar)**
 
@@ -39,7 +39,7 @@ As the end user, you are repsonsible for accepting the EULA from Mojang to run t
 These environment variables can be set at run time to override their defaults.
 
 * JVM_OPTS "-Xmx8G -Xms8G"
-* MOTD "Monifactory 0.12.1 Server Powered by Docker"
+* MOTD "Monifactory 0.12.3 Server Powered by Docker"
 * LEVEL world
 
 ### Adding Minecraft Operators
